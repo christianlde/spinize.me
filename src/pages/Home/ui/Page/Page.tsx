@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 function Section({ id, children }: { id: string, children: ReactNode }) {
   return <section id={id} className="min-h-96 flex flex-col justify-center items-start px-2 md:px-8 lg:px-32 xl:px-128 py-24">
@@ -8,9 +7,9 @@ function Section({ id, children }: { id: string, children: ReactNode }) {
 }
 
 function CustomLink({ href, children }: { href: string, children: ReactNode }) {
-  return <Link href={href} className="border-b-2 border-indigo-400 hover:text-indigo-400 transition-all duration-100">
+  return <a href={href} className="border-b-2 border-indigo-400 hover:text-indigo-400 transition-all duration-100">
     {children}
-  </Link>
+  </a>
 }
 
 function Emphasis({ children }: { children: ReactNode }) {
@@ -20,12 +19,12 @@ function Emphasis({ children }: { children: ReactNode }) {
 }
 
 
-export default function Home() {
+export default function App() {
   return (
     <main>
       <header className="py-24 flex flex-col flex-justify-center items-center gap-1">
         <h1 className="font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Spinize</h1>
-        <p className="text-gray-400">a music client for Navidrome and subsonic compatible servers.</p>
+        <p className="text-gray-400">Spinize is a sleek and modern Subsonic music client for streaming your personal music collection anytime, anywhere.</p>
         <p className="text-indigo-400 text-sm">(currently in beta)</p>
       </header>
 
