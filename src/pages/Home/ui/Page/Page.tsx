@@ -41,7 +41,7 @@ export default function App() {
             </CustomLink>
           </li>
           <li>
-            <CustomLink href='https://app.spinize.christiande.com/'>
+            <CustomLink href='https://spinize.christiande.com/app'>
               Open web app
             </CustomLink>
           </li>
