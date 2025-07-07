@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="violet">
   <head>
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
@@ -22,16 +22,16 @@
     <!-- <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spinize - Subsonic Music Client" />
     <meta name="twitter:description" content="A modern Subsonic client to stream your music with style." />
-    <meta name="twitter:image" content="https://yourdomain.com/images/twitter-image.png" />
+    <meta name="twitter:image" content="https://spinize.app/images/twitter-image.png" />
     <meta name="twitter:creator" content="@yourhandle" /> -->
 
     <!-- Favicon and Icons -->
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Theme / PWA -->
-    <meta name="theme-color" content="#1DB954" />
+    <meta name="theme-color" content="#000000" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -39,9 +39,16 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://spinize.app/" />
+
+    <!-- Apply Theme -->
+    <script>
+      // Check if the user has a saved theme preference
+      const savedTheme = localStorage.getItem('theme') || 'violet';
+      document.documentElement.classList.add(savedTheme);
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/app/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

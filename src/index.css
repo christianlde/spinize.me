@@ -1,0 +1,856 @@
+/* https://coolors.co/ffa9e7-ff84e8-7f2ccb-414361-2a2d43 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes animateSongBG {
+    0% {
+      filter: blur(4rem) saturate(1.5) brightness(2);
+      rotate: 0deg;
+      opacity: 0.5;
+      scale: 1;
+    }
+    50% {
+      filter: blur(4rem) saturate(1.9) brightness(3);
+      rotate: 270deg;
+      opacity: 0.4;
+      scale: 2;
+    }
+    100% {
+      filter: blur(4rem) saturate(1.5) brightness(2);
+      rotate: 360deg;
+      opacity: 0.5;
+      scale: 1;
+    }
+  }
+
+  .animate-song-bg {
+    animation: animateSongBG 35s ease-in infinite forwards;
+  }
+
+
+
+
+
+
+
+
+  /* Remove default outlines but preserve accessibility for keyboard users */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Custom focus ring */
+  *:focus-visible {
+    outline: 2px dashed var(--color-500);
+    outline-offset: 2px;
+  }
+
+
+
+
+
+    
+  /* === Range Slider === */
+  .range-slider-violet {
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 9999px;
+    appearance: none;
+    cursor: pointer;
+    background-color: #d1d5db;
+  }
+
+  /* Chrome / Safari / Edge */
+  .range-slider-violet::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(to right, var(--color-600) 0%, var(--color-600) var(--progress), #d1d5db var(--progress), #d1d5db 100%);
+  }
+
+  .range-slider-violet::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 9999px;
+    background-color: var(--color-600);
+    margin-top: -0.25rem;
+    border: none;
+  }
+
+  /* Firefox */
+  .range-slider-violet::-moz-range-track {
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #d1d5db;
+  }
+
+  .range-slider-violet::-moz-range-progress {
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--color-600);
+  }
+
+  .range-slider-violet::-moz-range-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 9999px;
+    background-color: var(--color-600);
+    border: none;
+  }
+
+
+
+
+
+  /* globals.css */
+  .range-slider-violet-minimalist {
+    width: 100%;
+    height: 0.125rem;
+    border-radius: 9999px;
+    appearance: none;
+    cursor: pointer;
+    background-color: #d1d5db;
+  }
+
+  /* Chrome / Safari / Edge */
+  .range-slider-violet-minimalist::-webkit-slider-runnable-track {
+    height: 0.125rem;
+    border-radius: 9999px;
+    background: linear-gradient(to right, var(--color-600) 0%, var(--color-600) var(--progress), #d1d5db var(--progress), #d1d5db 100%);
+  }
+
+  .range-slider-violet-minimalist::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  /* Firefox */
+  .range-slider-violet-minimalist::-moz-range-track {
+    height: 0.125rem;
+    border-radius: 9999px;
+    background-color: #d1d5db;
+  }
+
+  .range-slider-violet-minimalist::-moz-range-progress {
+    height: 0.125rem;
+    border-radius: 9999px;
+    background-color: var(--color-600);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* globals.css */
+  .range-slider-transparent {
+    width: 100%;
+    height: 0.7rem;
+    border-radius: 9999px;
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    opacity: 0.75;
+  }
+
+  /* Chrome / Safari / Edge */
+  .range-slider-transparent::-webkit-slider-runnable-track {
+    transition: all;
+    transition-duration: 200ms;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0.25) 0%, rgb(255, 255, 255, 0.5) var(--progress), rgb(0, 0, 0, 0.5) var(--progress), rgb(0, 0, 0, 0.25) 100%);
+  }
+  .range-slider-transparent:hover::-webkit-slider-runnable-track {
+    height: 0.7rem;
+  }
+
+  .range-slider-transparent::-webkit-slider-thumb {
+    appearance: none;
+    transition: all;
+    transition-duration: 200ms;
+    height: 0;
+    width: 0;
+    border-radius: 9999px;
+    background-color: rgb(255, 255, 255, 0);
+    margin-top: -0.2rem;
+    border: none;
+  }
+  .range-slider-transparent:hover::-webkit-slider-thumb {
+    appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: rgb(255, 255, 255, 1);
+  }
+
+  /* Firefox */
+  .range-slider-transparent::-moz-range-track {
+    transition: all;
+    transition-duration: 200ms;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+  .range-slider-transparent:hover::-moz-range-track {
+    height: 0.7rem;
+  }
+
+  .range-slider-transparent::-moz-range-progress {
+    transition: all;
+    transition-duration: 200ms;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+  .range-slider-transparent:hover::-moz-range-progress {
+    height: 0.7rem;
+  }
+
+  .range-slider-transparent::-moz-range-thumb {
+    appearance: none;
+    transition: all;
+    transition-duration: 200ms;
+    height: 0;
+    width: 0;
+    border-radius: 9999px;
+    background-color: rgb(255, 255, 255, 0);
+    margin-top: -0.2rem;
+    border: none;
+  }
+  .range-slider-transparent:hover::-moz-range-thumb {
+    appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: rgb(255, 255, 255, 1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+
+
+
+
+
+
+  @keyframes playing-icon-left {
+    0% {
+      height: 50%;
+    }
+    10% {
+      height: 40%;
+    }
+    20% {
+      height: 70%;
+    }
+    30% {
+      height: 60%;
+    }
+    40% {
+      height: 75%;
+    }
+    50% {
+      height: 20%;
+    }
+    60% {
+      height: 0%;
+    }
+    70% {
+      height: 30%;
+    }
+    80% {
+      height: 80%;
+    }
+    90% {
+      height: 70%;
+    }
+    100% {
+      height: 50%;
+    }
+  }
+
+  .playing-icon-left {
+    width: 100%;
+    max-width: 20%;
+    max-height: 75%;
+    animation: playing-icon-left 1500ms ease-in-out 950ms infinite forwards;
+    background: white;
+    border-radius: .15rem;
+  }
+
+  .playing-icon-center {
+    width: 100%;
+    max-width: 20%;
+    max-height: 75%;
+    animation: playing-icon-left 1500ms ease-in-out 0ms infinite forwards;
+    background: white;
+    border-radius: .15rem;
+  }
+
+  .playing-icon-right {
+    width: 100%;
+    max-width: 20%;
+    max-height: 75%;
+    animation: playing-icon-left 1500ms ease-in-out 700ms infinite forwards;
+    background: white;
+    border-radius: .15rem;
+  }
+}
+
+
+*, *::before, *::after {
+  /* margin: 0; */
+  /* padding: 0; */
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  padding-bottom: env(safe-area-inset-bottom); /* Add bottom padding equal to the safe area insets */
+
+  background: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+/* Hide scrollbar but allow scroll (modern browsers) */
+.hide-scrollbar {
+  /* overflow: auto; */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html.violet {
+  --color-500: #8b5cf6;
+  --color-600: #7c3aed;
+  --color-700: #6d28d9;
+  --color-800: #5b21b6;
+  --color-900: #4c1d95;
+  --color-950: #2e1065;
+  --color-golden: #fbbf24;
+}
+
+html.amber {
+  --color-500: #f59e0b;
+  --color-600: #d97706;
+  --color-700: #b45309;
+  --color-800: #92400e;
+  --color-900: #78350f;
+  --color-950: #6b2e0f;
+  --color-golden: #fff689;
+}
+
+html.indigo {
+  --color-500: #6366f1;
+  --color-600: #4f46e5;
+  --color-700: #4338ca;
+  --color-800: #3730a3;
+  --color-900: #2e1f8f;
+  --color-950: #1e1b7e;
+  --color-golden: #ffd700;
+}
+
+html.slate {
+  --color-500: #64748b;
+  --color-600: #475569;
+  --color-700: #334155;
+  --color-800: #1e293b;
+  --color-900: #0f172a;
+  --color-950: #0a1118;
+  --color-golden: #facc15;
+}
+
+html.fuchsia {
+  --color-500: #d946ef;
+  --color-600: #c026d3;
+  --color-700: #a21caf;
+  --color-800: #8616af;
+  --color-900: #701a75;
+  --color-950: #581d58;
+  --color-golden: #fcd34d;
+}
+
+html.lime {
+  --color-500: #84cc16;
+  --color-600: #65a30d;
+  --color-700: #4d7c0f;
+  --color-800: #3b5b08;
+  --color-900: #2a4e06;
+  --color-950: #213d05;
+  --color-golden: #ffd60a;
+}
+
+html.arcaneRed {
+  --color-500: #a11d33;
+  --color-600: #8b162c;
+  --color-700: #731224;
+  --color-800: #5a0d1a;
+  --color-900: #400611;
+  --color-950: #2a0309;
+  --color-golden: #ffc300;
+}
+
+html.arcaneAlchemy {
+  --color-500: #16a34a;
+  --color-600: #15803d;
+  --color-700: #166534;
+  --color-800: #14532d;
+  --color-900: #0f3a23;
+  --color-950: #081d13;
+  --color-golden: #ffd700;
+}
+
+/* === Border Colors (All sides) === */
+
+/* Full border color */
+.border-color-500 { border-color: var(--color-500); }
+.border-color-600 { border-color: var(--color-600); }
+.border-color-700 { border-color: var(--color-700); }
+.border-color-800 { border-color: var(--color-800); }
+.border-color-900 { border-color: var(--color-900); }
+.border-color-950 { border-color: var(--color-950); }
+.border-color-golden { border-color: var(--color-golden); }
+
+/* Border Left */
+.border-l-color-500 { border-left-color: var(--color-500); }
+.border-l-color-600 { border-left-color: var(--color-600); }
+.border-l-color-700 { border-left-color: var(--color-700); }
+.border-l-color-800 { border-left-color: var(--color-800); }
+.border-l-color-900 { border-left-color: var(--color-900); }
+.border-l-color-950 { border-left-color: var(--color-950); }
+.border-l-color-golden { border-left-color: var(--color-golden); }
+
+/* Border Top */
+.border-t-color-500 { border-top-color: var(--color-500); }
+.border-t-color-600 { border-top-color: var(--color-600); }
+.border-t-color-700 { border-top-color: var(--color-700); }
+.border-t-color-800 { border-top-color: var(--color-800); }
+.border-t-color-900 { border-top-color: var(--color-900); }
+.border-t-color-950 { border-top-color: var(--color-950); }
+.border-t-color-golden { border-top-color: var(--color-golden); }
+
+/* Border Right */
+.border-r-color-500 { border-right-color: var(--color-500); }
+.border-r-color-600 { border-right-color: var(--color-600); }
+.border-r-color-700 { border-right-color: var(--color-700); }
+.border-r-color-800 { border-right-color: var(--color-800); }
+.border-r-color-900 { border-right-color: var(--color-900); }
+.border-r-color-950 { border-right-color: var(--color-950); }
+.border-r-color-golden { border-right-color: var(--color-golden); }
+
+/* Border Bottom */
+.border-b-color-500 { border-bottom-color: var(--color-500); }
+.border-b-color-600 { border-bottom-color: var(--color-600); }
+.border-b-color-700 { border-bottom-color: var(--color-700); }
+.border-b-color-800 { border-bottom-color: var(--color-800); }
+.border-b-color-900 { border-bottom-color: var(--color-900); }
+.border-b-color-950 { border-bottom-color: var(--color-950); }
+.border-b-color-golden { border-bottom-color: var(--color-golden); }
+
+
+/* === Background colors === */
+.bg-500 { background-color: var(--color-500); }
+.bg-600 { background-color: var(--color-600); }
+.bg-700 { background-color: var(--color-700); }
+.bg-800 { background-color: var(--color-800); }
+.bg-950 { background-color: var(--color-950); }
+.bg-golden { background-color: var(--color-golden); }
+
+/* === Background colors with opacity === */
+/* === BG with Opacity (No Hover) === */
+
+/* Shades: 500, 600, 700, 800, 900, 950 */
+/* Opacity: 20, 30, 40, 50, 60, 70, 80, 90 */
+
+.bg-500\/20 { background-color: color-mix(in srgb, var(--color-500) 20%, transparent); }
+.bg-500\/30 { background-color: color-mix(in srgb, var(--color-500) 30%, transparent); }
+.bg-500\/40 { background-color: color-mix(in srgb, var(--color-500) 40%, transparent); }
+.bg-500\/50 { background-color: color-mix(in srgb, var(--color-500) 50%, transparent); }
+.bg-500\/60 { background-color: color-mix(in srgb, var(--color-500) 60%, transparent); }
+.bg-500\/70 { background-color: color-mix(in srgb, var(--color-500) 70%, transparent); }
+.bg-500\/80 { background-color: color-mix(in srgb, var(--color-500) 80%, transparent); }
+.bg-500\/90 { background-color: color-mix(in srgb, var(--color-500) 90%, transparent); }
+
+.bg-600\/20 { background-color: color-mix(in srgb, var(--color-600) 20%, transparent); }
+.bg-600\/30 { background-color: color-mix(in srgb, var(--color-600) 30%, transparent); }
+.bg-600\/40 { background-color: color-mix(in srgb, var(--color-600) 40%, transparent); }
+.bg-600\/50 { background-color: color-mix(in srgb, var(--color-600) 50%, transparent); }
+.bg-600\/60 { background-color: color-mix(in srgb, var(--color-600) 60%, transparent); }
+.bg-600\/70 { background-color: color-mix(in srgb, var(--color-600) 70%, transparent); }
+.bg-600\/80 { background-color: color-mix(in srgb, var(--color-600) 80%, transparent); }
+.bg-600\/90 { background-color: color-mix(in srgb, var(--color-600) 90%, transparent); }
+
+.bg-700\/20 { background-color: color-mix(in srgb, var(--color-700) 20%, transparent); }
+.bg-700\/30 { background-color: color-mix(in srgb, var(--color-700) 30%, transparent); }
+.bg-700\/40 { background-color: color-mix(in srgb, var(--color-700) 40%, transparent); }
+.bg-700\/50 { background-color: color-mix(in srgb, var(--color-700) 50%, transparent); }
+.bg-700\/60 { background-color: color-mix(in srgb, var(--color-700) 60%, transparent); }
+.bg-700\/70 { background-color: color-mix(in srgb, var(--color-700) 70%, transparent); }
+.bg-700\/80 { background-color: color-mix(in srgb, var(--color-700) 80%, transparent); }
+.bg-700\/90 { background-color: color-mix(in srgb, var(--color-700) 90%, transparent); }
+
+.bg-800\/20 { background-color: color-mix(in srgb, var(--color-800) 20%, transparent); }
+.bg-800\/30 { background-color: color-mix(in srgb, var(--color-800) 30%, transparent); }
+.bg-800\/40 { background-color: color-mix(in srgb, var(--color-800) 40%, transparent); }
+.bg-800\/50 { background-color: color-mix(in srgb, var(--color-800) 50%, transparent); }
+.bg-800\/60 { background-color: color-mix(in srgb, var(--color-800) 60%, transparent); }
+.bg-800\/70 { background-color: color-mix(in srgb, var(--color-800) 70%, transparent); }
+.bg-800\/80 { background-color: color-mix(in srgb, var(--color-800) 80%, transparent); }
+.bg-800\/90 { background-color: color-mix(in srgb, var(--color-800) 90%, transparent); }
+
+.bg-900\/20 { background-color: color-mix(in srgb, var(--color-900) 20%, transparent); }
+.bg-900\/30 { background-color: color-mix(in srgb, var(--color-900) 30%, transparent); }
+.bg-900\/40 { background-color: color-mix(in srgb, var(--color-900) 40%, transparent); }
+.bg-900\/50 { background-color: color-mix(in srgb, var(--color-900) 50%, transparent); }
+.bg-900\/60 { background-color: color-mix(in srgb, var(--color-900) 60%, transparent); }
+.bg-900\/70 { background-color: color-mix(in srgb, var(--color-900) 70%, transparent); }
+.bg-900\/80 { background-color: color-mix(in srgb, var(--color-900) 80%, transparent); }
+.bg-900\/90 { background-color: color-mix(in srgb, var(--color-900) 90%, transparent); }
+
+.bg-950\/20 { background-color: color-mix(in srgb, var(--color-950) 20%, transparent); }
+.bg-950\/30 { background-color: color-mix(in srgb, var(--color-950) 30%, transparent); }
+.bg-950\/40 { background-color: color-mix(in srgb, var(--color-950) 40%, transparent); }
+.bg-950\/50 { background-color: color-mix(in srgb, var(--color-950) 50%, transparent); }
+.bg-950\/60 { background-color: color-mix(in srgb, var(--color-950) 60%, transparent); }
+.bg-950\/70 { background-color: color-mix(in srgb, var(--color-950) 70%, transparent); }
+.bg-950\/80 { background-color: color-mix(in srgb, var(--color-950) 80%, transparent); }
+.bg-950\/90 { background-color: color-mix(in srgb, var(--color-950) 90%, transparent); }
+
+/* === Background colors with opacity === */
+.bg-golden\/20 { background-color: color-mix(in srgb, var(--color-golden) 20%, transparent); }
+.bg-golden\/30 { background-color: color-mix(in srgb, var(--color-golden) 30%, transparent); }
+.bg-golden\/40 { background-color: color-mix(in srgb, var(--color-golden) 40%, transparent); }
+.bg-golden\/50 { background-color: color-mix(in srgb, var(--color-golden) 50%, transparent); }
+.bg-golden\/60 { background-color: color-mix(in srgb, var(--color-golden) 60%, transparent); }
+.bg-golden\/70 { background-color: color-mix(in srgb, var(--color-golden) 70%, transparent); }
+.bg-golden\/80 { background-color: color-mix(in srgb, var(--color-golden) 80%, transparent); }
+.bg-golden\/90 { background-color: color-mix(in srgb, var(--color-golden) 90%, transparent); }
+
+/* === Hover background === */
+.hover\:bg-500:hover { background-color: var(--color-500); }
+.hover\:bg-600:hover { background-color: var(--color-600); }
+.hover\:bg-700:hover { background-color: var(--color-700); }
+.hover\:bg-800:hover { background-color: var(--color-800); }
+.hover\:bg-950:hover { background-color: var(--color-950); }
+.hover\:bg-golden:hover { background-color: var(--color-golden); }
+
+.hover\:bg-500\/20:hover { background-color: color-mix(in srgb, var(--color-500) 20%, transparent); }
+.hover\:bg-500\/30:hover { background-color: color-mix(in srgb, var(--color-500) 30%, transparent); }
+.hover\:bg-500\/40:hover { background-color: color-mix(in srgb, var(--color-500) 40%, transparent); }
+.hover\:bg-500\/50:hover { background-color: color-mix(in srgb, var(--color-500) 50%, transparent); }
+.hover\:bg-500\/60:hover { background-color: color-mix(in srgb, var(--color-500) 60%, transparent); }
+.hover\:bg-500\/70:hover { background-color: color-mix(in srgb, var(--color-500) 70%, transparent); }
+.hover\:bg-500\/80:hover { background-color: color-mix(in srgb, var(--color-500) 80%, transparent); }
+.hover\:bg-500\/90:hover { background-color: color-mix(in srgb, var(--color-500) 90%, transparent); }
+
+.hover\:bg-600\/20:hover { background-color: color-mix(in srgb, var(--color-600) 20%, transparent); }
+.hover\:bg-600\/30:hover { background-color: color-mix(in srgb, var(--color-600) 30%, transparent); }
+.hover\:bg-600\/40:hover { background-color: color-mix(in srgb, var(--color-600) 40%, transparent); }
+.hover\:bg-600\/50:hover { background-color: color-mix(in srgb, var(--color-600) 50%, transparent); }
+.hover\:bg-600\/60:hover { background-color: color-mix(in srgb, var(--color-600) 60%, transparent); }
+.hover\:bg-600\/70:hover { background-color: color-mix(in srgb, var(--color-600) 70%, transparent); }
+.hover\:bg-600\/80:hover { background-color: color-mix(in srgb, var(--color-600) 80%, transparent); }
+.hover\:bg-600\/90:hover { background-color: color-mix(in srgb, var(--color-600) 90%, transparent); }
+
+.hover\:bg-700\/20:hover { background-color: color-mix(in srgb, var(--color-700) 20%, transparent); }
+.hover\:bg-700\/30:hover { background-color: color-mix(in srgb, var(--color-700) 30%, transparent); }
+.hover\:bg-700\/40:hover { background-color: color-mix(in srgb, var(--color-700) 40%, transparent); }
+.hover\:bg-700\/50:hover { background-color: color-mix(in srgb, var(--color-700) 50%, transparent); }
+.hover\:bg-700\/60:hover { background-color: color-mix(in srgb, var(--color-700) 60%, transparent); }
+.hover\:bg-700\/70:hover { background-color: color-mix(in srgb, var(--color-700) 70%, transparent); }
+.hover\:bg-700\/80:hover { background-color: color-mix(in srgb, var(--color-700) 80%, transparent); }
+.hover\:bg-700\/90:hover { background-color: color-mix(in srgb, var(--color-700) 90%, transparent); }
+
+.hover\:bg-800\/20:hover { background-color: color-mix(in srgb, var(--color-800) 20%, transparent); }
+.hover\:bg-800\/30:hover { background-color: color-mix(in srgb, var(--color-800) 30%, transparent); }
+.hover\:bg-800\/40:hover { background-color: color-mix(in srgb, var(--color-800) 40%, transparent); }
+.hover\:bg-800\/50:hover { background-color: color-mix(in srgb, var(--color-800) 50%, transparent); }
+.hover\:bg-800\/60:hover { background-color: color-mix(in srgb, var(--color-800) 60%, transparent); }
+.hover\:bg-800\/70:hover { background-color: color-mix(in srgb, var(--color-800) 70%, transparent); }
+.hover\:bg-800\/80:hover { background-color: color-mix(in srgb, var(--color-800) 80%, transparent); }
+.hover\:bg-800\/90:hover { background-color: color-mix(in srgb, var(--color-800) 90%, transparent); }
+
+.hover\:bg-900\/20:hover { background-color: color-mix(in srgb, var(--color-900) 20%, transparent); }
+.hover\:bg-900\/30:hover { background-color: color-mix(in srgb, var(--color-900) 30%, transparent); }
+.hover\:bg-900\/40:hover { background-color: color-mix(in srgb, var(--color-900) 40%, transparent); }
+.hover\:bg-900\/50:hover { background-color: color-mix(in srgb, var(--color-900) 50%, transparent); }
+.hover\:bg-900\/60:hover { background-color: color-mix(in srgb, var(--color-900) 60%, transparent); }
+.hover\:bg-900\/70:hover { background-color: color-mix(in srgb, var(--color-900) 70%, transparent); }
+.hover\:bg-900\/80:hover { background-color: color-mix(in srgb, var(--color-900) 80%, transparent); }
+.hover\:bg-900\/90:hover { background-color: color-mix(in srgb, var(--color-900) 90%, transparent); }
+
+.hover\:bg-950\/20:hover { background-color: color-mix(in srgb, var(--color-950) 20%, transparent); }
+.hover\:bg-950\/30:hover { background-color: color-mix(in srgb, var(--color-950) 30%, transparent); }
+.hover\:bg-950\/40:hover { background-color: color-mix(in srgb, var(--color-950) 40%, transparent); }
+.hover\:bg-950\/50:hover { background-color: color-mix(in srgb, var(--color-950) 50%, transparent); }
+.hover\:bg-950\/60:hover { background-color: color-mix(in srgb, var(--color-950) 60%, transparent); }
+.hover\:bg-950\/70:hover { background-color: color-mix(in srgb, var(--color-950) 70%, transparent); }
+.hover\:bg-950\/80:hover { background-color: color-mix(in srgb, var(--color-950) 80%, transparent); }
+.hover\:bg-950\/90:hover { background-color: color-mix(in srgb, var(--color-950) 90%, transparent); }
+
+.hover\:bg-golden\/20:hover { background-color: color-mix(in srgb, var(--color-golden) 20%, transparent); }
+.hover\:bg-golden\/30:hover { background-color: color-mix(in srgb, var(--color-golden) 30%, transparent); }
+.hover\:bg-golden\/40:hover { background-color: color-mix(in srgb, var(--color-golden) 40%, transparent); }
+.hover\:bg-golden\/50:hover { background-color: color-mix(in srgb, var(--color-golden) 50%, transparent); }
+.hover\:bg-golden\/60:hover { background-color: color-mix(in srgb, var(--color-golden) 60%, transparent); }
+.hover\:bg-golden\/70:hover { background-color: color-mix(in srgb, var(--color-golden) 70%, transparent); }
+.hover\:bg-golden\/80:hover { background-color: color-mix(in srgb, var(--color-golden) 80%, transparent); }
+.hover\:bg-golden\/90:hover { background-color: color-mix(in srgb, var(--color-golden) 90%, transparent); }
+
+/* === Text colors === */
+.text-500 { color: var(--color-500); }
+.text-600 { color: var(--color-600); }
+.text-700 { color: var(--color-700); }
+.text-800 { color: var(--color-800); }
+.text-950 { color: var(--color-950); }
+.text-golden { color: var(--color-golden); }
+
+.hover\:text-500:hover { color: var(--color-500); }
+.hover\:text-600:hover { color: var(--color-600); }
+.hover\:text-700:hover { color: var(--color-700); }
+.hover\:text-800:hover { color: var(--color-800); }
+.hover\:text-950:hover { color: var(--color-950); }
+.hover\:text-golden:hover { color: var(--color-golden); }
+
+/* === Focus ring colors === */
+.focus\:ring-500:focus { box-shadow: 0 0 0 3px var(--color-500); }
+.focus\:ring-600:focus { box-shadow: 0 0 0 3px var(--color-600); }
+.focus\:ring-700:focus { box-shadow: 0 0 0 3px var(--color-700); }
+.focus\:ring-800:focus { box-shadow: 0 0 0 3px var(--color-800); }
+.focus\:ring-950:focus { box-shadow: 0 0 0 3px var(--color-950); }
+.focus\:ring-golden:focus { box-shadow: 0 0 0 3px var(--color-golden); }
+
+
+/* TEXT SELECTION */
+
+::selection {
+  background: var(--color-950); /* Background color when text is selected */
+  color: var(--color-600); /* Text color of selected text */
+}
+
+::-moz-selection {
+  background: var(--color-950); /* Background color when text is selected */
+  color: var(--color-600); /* Text color of selected text */
+}
+
+
+/* SCROLL BAR */
+
+
+/* Style for the entire scrollbar */
+::-webkit-scrollbar {
+  width: .25rem; /* relatively thin scrollbar */
+  height: .25rem; /* height of the scrollbar for horizontal scroll */
+}
+
+/* Style for the scrollbar track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: var(--color-950); /* custom background color for the track */
+}
+
+/* Style for the scrollbar thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-600); /* primary color for the thumb */
+  border-radius: 10px; /* optional rounded corners for the thumb */
+  cursor: pointer;
+}
+
+/* Style for the thumb when it is hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-700); /* hover color for the thumb */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Splash Screen Styles */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1s ease-out 1s forwards;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: popIn 1s ease-out;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1rem;
+  animation: logoBounce 1.5s ease-in-out;
+}
+
+.app-name {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: fadeInText 1s ease-out 0.8s forwards;
+}
+
+/* Main content */
+.main-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+/* Animations */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes logoBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
