@@ -21,7 +21,7 @@ function Emphasis({ children }: { children: ReactNode }) {
 
 export default function AboutProject() {
   return (
-    <main className="px-2 md:px-4 lg:px-8 xl:px-12">
+    <main className="text-white bg-stone-900 px-2 md:px-4 lg:px-8 xl:px-12 overflow-y-scroll h-[100vh]">
       <header className="py-10 md:py-14 lg:py-18 xl:py-24 flex flex-col flex-justify-center items-center gap-1">
         <h1 className="mb-8 font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Spinize</h1>
         <p className="text-gray-400">Spinize is a sleek and modern Subsonic music client for streaming your personal music collection anytime, anywhere.</p>
